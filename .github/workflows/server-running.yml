@@ -1,0 +1,35 @@
+name: Trigger Multiple URLs
+
+# Controls when the action will run. Schedules the workflow to run every 5 minutes.
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  trigger-urls:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger URL 1
+        run: curl -s https://ai-ims.onrender.com/api/inventoryitem
+
+      - name: Trigger URL 2
+        run: curl -s https://hrms-f96y.onrender.com/api/settings
+
+      - name: Trigger URL 3
+        run: curl -s https://weathertogo.onrender.com/api/ping
+
+      - name: Trigger URL 4
+        run: curl -s https://tree-info.onrender.com/api/species
+
+      - name: Trigger URL 5
+        run: curl -s https://qrcode-generator-7o6r.onrender.com/ping
+
+      - name: Trigger URL 6
+        run: curl -s https://bitebuddy-nydw.onrender.com/api/v1/food-item
+
+      - name: Trigger URL 7
+        run: curl -s https://movieinfo-3owl.onrender.com/
+
+      - name: Trigger URL 8
+        run: curl -s https://news-on-the-go.onrender.com/
